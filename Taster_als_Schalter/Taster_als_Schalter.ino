@@ -1,8 +1,8 @@
 #include <OneButton.h>
 #define LED 2
 
-OneButton taster(10, true);
-bool merkerLed = HIGH;
+OneButton taster(10, false);
+bool merkerLed = LOW;
 
 void setup()
 {
