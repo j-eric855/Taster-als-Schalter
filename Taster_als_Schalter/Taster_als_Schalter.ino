@@ -2,7 +2,7 @@
 #define LED 2
 
 OneButton taster(10, true);
-bool merkerLed = false;
+bool merkerLed = HIGH;
 
 void setup()
 {
@@ -19,19 +19,14 @@ void loop()
 
 
   delay(10);
+
+
+  digitalWrite(LED, merkerLed);
+
 }
 
 void Taster_Funktion()
 {
-  if (merkerLed == true)
-  {
-    digitalWrite(LED, LOW);
-    merkerLed = false;
-  }
-  else
-  {
-    digitalWrite(LED, HIGH);
-    merkerLed = true;
-  }
+  merkerLed = !merkerLed;
 }
 
